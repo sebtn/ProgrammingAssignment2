@@ -2,7 +2,7 @@
 # setwd("~/R prog.coursera")
 
 # makeChacheMatrix is a function list, includes: set, get, getinverse and setinverse.
-# Let's define a matrix with Makechache Matrix named "z":
+# Let's define a matrix with MakechacheMatrix function and let's name it "z":
 # some commands and their results:
 # z$get(); gives back the original matrix.
 # cacheSolve(z); returns the matrix "z" inverse and stores it in the cache for future references.
