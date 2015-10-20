@@ -1,15 +1,34 @@
-## Put comments here that give an overall description of what your
-## functions do
+#------ By Sebastian Bedout --------------#
+# setwd("~/R prog.coursera")
 
-## Write a short comment describing this function
+# makevector almacena una lista de funciones. set, get, setmean, getmean
+# el makevector siempre se almacena un vector llamada x, 
+# usando $get(), se obtiene dicjho vector
+# usando set, se cambia el vector almcaenado en la funcion ppal, se unsa cunado se quierecambiar el vector
+
 
 makeCacheMatrix <- function(x = matrix()) {
-
+    inverse <- NULL
+    set <- function(y) {
+    x <<- y
+    inverse <<- NULL
+  }
+  get <- function() x
+  setinverse <- function(inverse) inverse <<- inverse
+  getinverse <- function() inverse
+  list(set = set, get = get,
+       setinverse = setinverse,
+       getinverse = getinverse)
 }
-
-
-## Write a short comment describing this function
-
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+    inverse <- x$getinverse()
+    if(!is.null(inverse)) {
+    message("getting cached data")
+    return(inverse)
+  }
+  data <- x$get()
+  inverse <- solve(x$get(), ...)
+  x$setinverse(inverse)
+  inverse
+  
 }
