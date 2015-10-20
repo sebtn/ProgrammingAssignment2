@@ -1,11 +1,13 @@
 #------ By Sebastian Bedout --------------#
 # setwd("~/R prog.coursera")
 
-# makevector almacena una lista de funciones. set, get, setmean, getmean
-# el makevector siempre se almacena un vector llamada x, 
-# usando $get(), se obtiene dicjho vector
-# usando set, se cambia el vector almcaenado en la funcion ppal, se unsa cunado se quierecambiar el vector
-
+# makeChacheMatrix is a function list, includes: set, get, getinverse and setinverse.
+# Let's define a matrix with Makechache Matrix named "z":
+# some comands and their results:
+# z$get(); gives back the original matrix.
+# cacheSolve(z); returns the matrix "z" inverse and stroes it in the chache for future references.
+# z$getinverse; returns the inverse, but with no cache storge function to it.
+# cacheSolve(z); gives back the matrix z inverse in storage. You can see in the screen "getting cache data"
 
 makeCacheMatrix <- function(x = matrix()) {
     inverse <- NULL
