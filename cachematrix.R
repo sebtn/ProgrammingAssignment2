@@ -2,9 +2,13 @@
 # setwd("~/R prog.coursera")
 
 # makeChacheMatrix is a function list, includes: set, get, getinverse and setinverse.
-# Let's define a matrix with MakecacheMatrix function and let's name it "z":
-# some commands and their results:
-# z$get(); gives back the original matrix.
+# The symbol "<<-" will assing a numeric value, represented by de 'greater than side...' outside the function,
+# the symbol allow R: "to modify a variable modify a variable declared outside of the current function 
+# in which the reference to the variable is made".
+
+# Let's define a matrix with MakecacheMatrix function and let's name it z <- makeCacheMatrix(matrix(some_matrix))
+# some commands and their results interpretations:
+# z$get(); gives back the original matrix "z".
 # z$getinverse; returns the inverse, but with no cache storage function to it.
 
 
@@ -22,9 +26,10 @@ makeCacheMatrix <- function(x = matrix()) {
        getinverse = getinverse)
        
 # cacheSolve(z); returns the matrix "z" inverse and stores it in the cache for future references.
-# Because "matrix inversion is usually a costly computation and there may be some benefit to caching 
+# Because: "matrix inversion is usually a costly computation and there may be some benefit to caching 
 # the inverse of a matrix rather than computing it repeatedly".       
-# cacheSolve(z); gives back the matrix z inverse in storage. You can see in the screen "getting cache data"       
+# cacheSolve(z); gives back the matrix "z" inverse in storage. You can see in the screen "getting cache data"      
+
 }
 cacheSolve <- function(x, ...) {
     inverse <- x$getinverse()
