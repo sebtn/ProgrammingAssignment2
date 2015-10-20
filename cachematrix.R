@@ -3,10 +3,10 @@
 
 # makeChacheMatrix is a function list, includes: set, get, getinverse and setinverse.
 # Let's define a matrix with Makechache Matrix named "z":
-# some comands and their results:
+# some commands and their results:
 # z$get(); gives back the original matrix.
-# cacheSolve(z); returns the matrix "z" inverse and stroes it in the chache for future references.
-# z$getinverse; returns the inverse, but with no cache storge function to it.
+# cacheSolve(z); returns the matrix "z" inverse and stores it in the cache for future references.
+# z$getinverse; returns the inverse, but with no cache storage function to it.
 # cacheSolve(z); gives back the matrix z inverse in storage. You can see in the screen "getting cache data"
 
 makeCacheMatrix <- function(x = matrix()) {
