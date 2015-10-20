@@ -1,11 +1,10 @@
-#------ By Sebastian Bedout --------------#
+#------ By Seb Bedout --------------#
 # setwd("~/R prog.coursera")
 
 # makeChacheMatrix is a function list, includes: set, get, getinverse and setinverse.
 # Let's define a matrix with MakecacheMatrix function and let's name it "z":
 # some commands and their results:
 # z$get(); gives back the original matrix.
-
 # z$getinverse; returns the inverse, but with no cache storage function to it.
 
 
