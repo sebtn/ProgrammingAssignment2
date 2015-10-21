@@ -1,7 +1,7 @@
 #------ By Seb Bedout --------------#
 # setwd("~/R prog.coursera")
 
-# Teh idea of the code is to store a time consuming and computing expensive process inside a cache,
+# The idea of the code is to store a time consuming and computing expensive process inside a cache,
 # so we can reuse it several times, i.e when we are looping.
 
 # makeChacheMatrix is a function list, includes: set, get, getinverse and setinverse.
@@ -32,7 +32,7 @@ makeCacheMatrix <- function(x = matrix()) {
 # cacheSolve(z); returns the matrix "z" inverse and stores it in the cache for future references.
 # Because: "matrix inversion is usually a costly computation and there may be some benefit to caching 
 # the inverse of a matrix rather than computing it repeatedly".       
-# cacheSolve(z); gives back the matrix "z" inverse in storage. You can see it in the screen "getting cache data"      
+# cacheSolve(z); a second time gives back the matrix "z" inverse in storage. You can see it in the screen "getting cache data"      
 
 }
 cacheSolve <- function(x, ...) {
