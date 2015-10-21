@@ -32,7 +32,9 @@ makeCacheMatrix <- function(x = matrix()) {
 # cacheSolve(z); returns the matrix "z" inverse and stores it in the cache for future references.
 # Because: "matrix inversion is usually a costly computation and there may be some benefit to caching 
 # the inverse of a matrix rather than computing it repeatedly".       
-# cacheSolve(z); a second time gives back the matrix "z" inverse in storage. You can see it in the screen "getting cache data"      
+# cacheSolve(z); a second time gives back the matrix "z" inverse in storage. You can see it in the screen "getting cache data" 
+# z$get() %*% z$getinverse(),  would get for us the Identity matrix, which validates our answers and our code,
+# beacuse not only does it store a cache inverse but returns a corret answer when we need it.
 
 }
 cacheSolve <- function(x, ...) {
