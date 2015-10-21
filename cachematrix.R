@@ -6,14 +6,14 @@
 
 # makeChacheMatrix is a function list, includes: set, get, getinverse and setinverse.
 # The symbol "<<-" will assing a numeric value, represented by de 'greater than side...' outside the function,
-# the symbol allow R: "to modify a variable modify a variable declared outside of the current function 
+# the symbol allow R: "to modify a variable declared outside of the current function 
 # in which the reference to the variable is made".
-# It's easier to understand a code when the results of the functions inside are interpreted, so:
+# It's easier to understand a code when the results of the functions inside are interpreted, so...
 
 # Let's define a matrix with MakecacheMatrix function and let's name it z <- makeCacheMatrix(matrix(some_matrix))
-# some commands and their results interpretations:
+# some commands and their results interpretations are:
 # z$get(); gives back the original matrix "z".
-# z$getinverse; returns the inverse, but with no cache storage function to it.
+# z$getinverse; returns the inverse z, but with no cache storage function to it.
 
 
 makeCacheMatrix <- function(x = matrix()) {
@@ -34,7 +34,7 @@ makeCacheMatrix <- function(x = matrix()) {
 # the inverse of a matrix rather than computing it repeatedly".       
 # cacheSolve(z); a second time gives back the matrix "z" inverse in storage. You can see it in the screen "getting cache data" 
 # z$get() %*% z$getinverse(),  would get for us the Identity matrix, which validates our answers and our code,
-# beacuse not only does it store a cache inverse but returns a corret answer when we need it.
+# beacuse not only does it store a cache inverse but returns a correct answer when we need it.
 
 }
 cacheSolve <- function(x, ...) {
